@@ -54,18 +54,19 @@ submit.onclick=function(){
         for(let i=0;i<newPro.count;i++){
             dataPro.push(newPro);
         }
-    }else{
+    }
+    else{
         dataPro.push(newPro);
     }
     }else{
-    //clear inputs
-    clearData();
-    }
-
         dataPro[tmp]=newPro;
         mode='create';
         submit.innerHTML="Create";
         count.style.display="block";
+
+    }
+        //clear inputs
+    clearData();
     }
     //save in localStorage
     localStorage.setItem('product', JSON.stringify(dataPro));
